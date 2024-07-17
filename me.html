@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Al-Muhsen | SFAH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e1e1e, #333333);
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            color: #ffcc00;
+        }
+
+        header p {
+            font-size: 1.3em;
+            color: #cccccc;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ffcc00;
+        }
+
+        .tab {
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 0 10px;
+            color: #cccccc;
+            position: relative;
+            transition: color 0.3s;
+            border-radius: 12px;
+        }
+
+        .tab.active {
+            color: #ffcc00;
+            font-weight: bold;
+            border: 2px solid #ffcc00;
+        }
+
+        .content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .certificates, .projects {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .certificates li, .projects li {
+            background-color: #1a1a1a;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .certificates li:hover, .projects li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+            border-radius: 50%;
+            background-color: #ffcc00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+
+        .instagram::before {
+            content: '';
+            width: 60%;
+            height: 60%;
+            border-radius: 15%;
+            background: radial-gradient(circle at 30% 30%, #ffdc80, #f77737, #f56040, #bc2a8d, #4c68d7);
+            position: absolute;
+            top: 20%;
+            left: 20%;
+        }
+
+        .telegram::before {
+            content: '';
+            width: 60%;
+            height: 60%;
+            background-color: #ffffff;
+            clip-path: polygon(50% 0%, 100% 100%, 50% 80%, 0% 100%);
+            position: absolute;
+            top: 20%;
+            left: 20%;
+        }
+
+        .telegram::after {
+            content: '';
+            width: 25%;
+            height: 25%;
+            background-color: #0088cc;
+            clip-path: polygon(50% 0%, 100% 100%, 50% 80%, 0% 100%);
+            position: absolute;
+            top: 30%;
+            left: 45%;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.8em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            .tab {
+                margin: 5px;
+            }
+
+            .content {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="animate__animated animate__fadeInDown">
+        <h1>Mohammed Al-Muhsen | SFAH</h1>
+        <p>Software Engineer & Cybersecurity Enthusiast</p>
+    </header>
+
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" data-target="about">About Me</div>
+            <div class="tab" data-target="certificates">Certificates</div>
+            <div class="tab" data-target="projects">Projects</div>
+        </div>
+
+        <section id="about" class="content active">
+            <h2>About</h2>
+            <p>I am a 22-year-old software engineer from Iraq, experienced in application development, Kotlin, web design, Python, cybersecurity, and vulnerability assessment. I have numerous achievements and certificates.</p>
+        </section>
+
+        <section id="certificates" class="content">
+            <h2>Certificates</h2>
+            <ul class="certificates">
+                <li>Intermediate Hacking Techniques</li>
+                <li>Kotlin Development</li>
+                <li>Python Programming</li>
+                <li>Web Design and Development</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="content">
+            <h2>Projects</h2>
+            <ul class="projects">
+                <li>Penetration testing of Amino application, discovered and reported vulnerabilities</li>
+                <li>Database disclosures for various applications, responsible disclosure</li>
+                <li>Penetration of approximately 5000 bank cards, reported and vulnerabilities closed</li>
+                <li>Developed several Android and iOS applications</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/S8fah" target="_blank" class="icon instagram"></a>
+            <a href="https://t.me/@AKAT_4" target="_blank" class="icon telegram"></a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                contents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === tab.dataset.target) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        anime({
+            targets: '.about, .certificates li, .projects li',
+            translateY: [-30, 0],
+            opacity: [0, 1],
+            duration: 2000,
+            delay: anime.stagger(300),
+            easing: 'easeOutExpo'
+        });
+    </script>
+</body>
+</html>
